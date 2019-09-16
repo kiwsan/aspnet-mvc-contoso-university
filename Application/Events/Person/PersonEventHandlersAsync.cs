@@ -5,7 +5,7 @@ using MediatR;
 
 namespace Application.Events.Person
 {
-    public class PersonEventHandlers : INotificationHandler<PersonCreatedEvent>
+    public class PersonEventHandlersAsync : INotificationHandler<PersonCreatedEvent>
     {
         public Task Handle(PersonCreatedEvent notification, CancellationToken cancellationToken)
         {

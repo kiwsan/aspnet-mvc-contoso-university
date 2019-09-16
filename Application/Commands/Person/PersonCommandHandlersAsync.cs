@@ -1,17 +1,21 @@
-using System.Threading;
-using System.Threading.Tasks;
 using Application.Commands.Person.Create;
 using Application.Events.Person;
+using Domain.Interfaces;
 using MediatR;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Application.Commands.Person
 {
     public class PersonCommandHandlersAsync : IRequestHandler<CreatePersonCommand, int>
     {
+
+        private readonly IPersonRepository _personRepository;
         private readonly IMediator _mediator;
 
-        public PersonCommandHandlersAsync(IMediator mediator)
+        public PersonCommandHandlersAsync(IPersonRepository personRepository, IMediator mediator)
         {
+            _personRepository = personRepository;
             _mediator = mediator;
         }
 
@@ -21,5 +25,6 @@ namespace Application.Commands.Person
 
             return Task.FromResult(1);
         }
+
     }
 }

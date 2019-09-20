@@ -20,7 +20,7 @@ namespace Domain.Entities
         public DateTime BirthDate { get; set; }
 
         public DateTime CreatedDate { get; set; }
-        /*
+
         public class PersonConfiguration : EntityTypeConfiguration<Person>
         {
             public PersonConfiguration()
@@ -40,6 +40,6 @@ namespace Domain.Entities
 
             }
         }
-        */
+
     }
 }

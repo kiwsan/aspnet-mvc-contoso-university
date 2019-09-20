@@ -1,8 +1,10 @@
 ﻿using Application.Validator;
+using Common.Exceptions;
 using FluentValidation.WebApi;
 using Newtonsoft.Json.Serialization;
 using System.Configuration;
 using System.Web.Http;
+using System.Web.Http.ExceptionHandling;
 
 namespace ContosoUniversity
 {
@@ -22,7 +24,7 @@ namespace ContosoUniversity
             var jsonFormatter = config.Formatters.JsonFormatter;
 
             //Register Exception Handler  
-            //config.Services.Add(typeof(IExceptionLogger), new ManagerWebApiExceptions());
+            config.Services.Add(typeof(IExceptionLogger), new ManagerWebApiExceptions());
 
             // Web API routes
             config.MapHttpAttributeRoutes();

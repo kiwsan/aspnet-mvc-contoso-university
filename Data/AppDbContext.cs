@@ -12,7 +12,7 @@ namespace Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Configurations.Add(new Person.PersonConfiguration());
+            modelBuilder.Configurations.Add(new Person.PersonConfiguration());
         }
     }
 }

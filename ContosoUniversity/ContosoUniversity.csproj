@@ -253,10 +253,6 @@
       <Project>{40b062fe-c49b-4d2e-80ff-ad6898aeed1e}</Project>
       <Name>Application</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{39972802-763D-4DC8-B9EA-75D373604EBD}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{97832CDE-86B1-47F2-852C-BE8FFD7CD3FD}</Project>
       <Name>Data</Name>
